@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://webgyn.digital/sitemap.xml
+
+# Bloquear diretórios desnecessários
+Disallow: /.agents/
+Disallow: /hero/
