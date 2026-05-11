@@ -37,6 +37,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
 
+  <!-- Lucide Icons -->
+  <link rel="preconnect" href="https://unpkg.com">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
   <!-- Critical CSS inline para first paint rápido -->
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -66,7 +70,6 @@
     @media(max-width:480px){.hero-container{padding:100px 16px 50px}.hero-title{font-size:1.85rem}}
   </style>
 
-<<<<<<< HEAD
   <!-- Critical CSS inline para first paint rápido -->
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -100,14 +103,6 @@
   <link rel="preload" as="style" href="style.css">
   <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="style.css"></noscript>
-
-=======
-  <!-- Styles: full CSS carrega sem bloquear -->
-  <link rel="preload" as="style" href="style.css">
-  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="style.css"></noscript>
-
->>>>>>> d7391f96a1e374f8212e073484cc734fa5c3d769
   <!-- Preload LCP image -->
   <link rel="preload" as="image" href="hero/all.webp" fetchpriority="high">
 
@@ -249,7 +244,6 @@
 
   <!-- ═══════════ HERO SECTION ═══════════ -->
   <section class="hero" id="hero">
-<<<<<<< HEAD
     <!-- Background: esteira de imagens h1-h8 (hidden no mobile via critical CSS) -->
     <div class="hero-bg-track" aria-hidden="true">
       <div class="hero-bg-strip" id="heroBgStrip">
@@ -270,28 +264,6 @@
         <img data-src="hero/h6.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
         <img data-src="hero/h7.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
         <img data-src="hero/h8.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
-=======
-    <!-- Background: esteira de imagens h1-h8 (lazy loading inteligente no mobile) -->
-    <div class="hero-bg-track" aria-hidden="true">
-      <div class="hero-bg-strip" id="heroBgStrip">
-        <img src="hero/h1.webp" alt="" width="360" height="640">
-        <img src="hero/h2.webp" alt="" width="360" height="640">
-        <img src="hero/h3.webp" alt="" width="360" height="640">
-        <img data-src="hero/h4.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h5.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h6.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h7.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h8.webp" alt="" width="360" height="640" class="hero-lazy">
-        <!-- Duplicadas para loop contínuo -->
-        <img data-src="hero/h1.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h2.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h3.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h4.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h5.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h6.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h7.webp" alt="" width="360" height="640" class="hero-lazy">
-        <img data-src="hero/h8.webp" alt="" width="360" height="640" class="hero-lazy">
->>>>>>> d7391f96a1e374f8212e073484cc734fa5c3d769
       </div>
     </div>
     <!-- Overlay -->
@@ -730,9 +702,6 @@
     <span class="wpp-icon wpp-icon--lg"><i data-lucide="message-circle" class="wpp-bubble"></i><i data-lucide="phone" class="wpp-phone"></i></span>
   </a>
 
-<<<<<<< HEAD
-
-
   <!-- Showcase lazy-load: carrega src das imagens de slide que estão em data-src -->
   <script>
     (function(){
@@ -741,23 +710,10 @@
       var t=setTimeout(function(){
         imgs.forEach(function(i){i.src=i.dataset.src;i.removeAttribute('data-src');});
       },2000);
-=======
-  <!-- Lucide Icons: carrega APÓS conteúdo visível -->
-  <script>
-    (function(){
-      var s=document.createElement('script');
-      s.src='https://unpkg.com/lucide@latest/dist/umd/lucide.js';
-      s.onload=function(){if(typeof lucide!=='undefined')lucide.createIcons();};
-      if('requestIdleCallback' in window){requestIdleCallback(function(){document.body.appendChild(s);});}else{setTimeout(function(){document.body.appendChild(s);},100);}
->>>>>>> d7391f96a1e374f8212e073484cc734fa5c3d769
     })();
   </script>
 
   <script src="script.js" defer></script>
-<<<<<<< HEAD
-  <script src="perf-mobile.js"></script>
-=======
   <script src="perf-mobile.js" defer></script>
->>>>>>> d7391f96a1e374f8212e073484cc734fa5c3d769
 </body>
 </html>
