@@ -35,6 +35,18 @@
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=2592000" }
       ]
+    },
+    {
+      "source": "/perf-mobile.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000" }
+      ]
+    },
+    {
+      "source": "/(index\\.html)?",
+      "headers": [
+        { "key": "Link", "value": "</hero/all.webp>; rel=preload; as=image; fetchpriority=high" }
+      ]
     }
   ]
 }

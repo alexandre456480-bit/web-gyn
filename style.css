@@ -589,6 +589,8 @@ button {
   background: #f8f9fa;
   overflow: hidden;
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1200px;
 }
 
 .portfolio-container {
@@ -984,6 +986,8 @@ button {
   padding: 120px 32px 100px;
   background: linear-gradient(170deg, #060e24 0%, #0a1a3a 40%, #0c2350 85%, #0c2350 100%);
   overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1000px;
 }
 
 /* Divider topo */
@@ -3109,5 +3113,39 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* ═══════════════════════════════════════
+   CONTENT-VISIBILITY: seções below-fold
+═══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .portfolio,
+  .servicos,
+  .vantagens,
+  .contact-cta,
+  .footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 800px;
+  }
+  
+  /* Remove SVG filters pesados */
+  .portfolio-golden-trail,
+  .particles,
+  .servicos-particles {
+    display: none !important;
+  }
+  
+  /* Simplifica backdrop-filter */
+  .servico-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  /* Remove will-change desnecessário */
+  .hero-bg-strip,
+  .showcase-img,
+  .mural-item {
+    will-change: auto !important;
   }
 }

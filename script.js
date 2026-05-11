@@ -76,6 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const outgoing = slides[currentSlide];
     const incoming = slides[index];
 
+    // Garantir que a imagem incoming tenha src carregado
+    if (incoming.dataset.src) {
+      incoming.src = incoming.dataset.src;
+      incoming.removeAttribute('data-src');
+    }
+
     // Saída: colapso circular + rotação 3D
     outgoing.classList.remove('active');
     outgoing.classList.add('exit');

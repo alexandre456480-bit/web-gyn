@@ -30,19 +30,52 @@
   <meta name="twitter:description" content="Criação de sites modernos e otimizados em Goiânia.">
   <meta name="twitter:image" content="https://webgyn.digital/hero/all.webp">
 
-  <!-- Fonts -->
+  <!-- Fonts: preload + non-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
 
   <!-- Lucide Icons -->
   <link rel="preconnect" href="https://unpkg.com">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Critical CSS inline para first paint rápido -->
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{font-family:'DM Sans',sans-serif;color:#071739;background:#f5f7fa;overflow-x:hidden;line-height:1.6}
+    img{max-width:100%;height:auto;display:block}
+    a{text-decoration:none;color:inherit}
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0}
+    .nav-container{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo img{height:42px;width:auto}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#071739}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,23,57,.92),rgba(7,23,57,.85) 40%,rgba(12,35,80,.75));z-index:1}
+    .hero-container{position:relative;z-index:2;max-width:1360px;margin:0 auto;padding:120px 32px 80px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px}
+    .hero-content{display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+    .hero-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;line-height:1.1;color:#fff;letter-spacing:-.02em}
+    .gradient-text{background:linear-gradient(135deg,#38bdf8,#0ea5e9,#2563eb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-subtitle{font-size:1.05rem;color:#A4B5C4;line-height:1.7;max-width:500px}
+    .hero-bg-track{position:absolute;inset:0;overflow:hidden}
+    .hero-bg-strip{display:flex;gap:12px;height:100%;animation:bgScroll 30s linear infinite;will-change:transform}
+    .hero-bg-strip img{height:100%;width:auto;aspect-ratio:9/16;object-fit:cover;flex-shrink:0;border-radius:4px}
+    @keyframes bgScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .showcase-slider{position:relative;width:100%;max-width:620px;aspect-ratio:3/2}
+    .showcase-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0}
+    .showcase-img.active{opacity:1}
+    @media(max-width:1024px){.hero-container{grid-template-columns:1fr;text-align:center;gap:40px;padding:110px 24px 60px}.hero-content{align-items:center}}
+    @media(max-width:768px){.hero-title{font-size:clamp(2rem,6vw,2.8rem)}.nav-hamburger{display:flex}.nav-actions{display:none}.nav-links{display:none}.hero-bg-track{display:none!important}.particles,.servicos-particles,.portfolio-golden-trail,.showcase-glow{display:none!important}.servico-card{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
+    @media(max-width:480px){.hero-container{padding:100px 16px 50px}.hero-title{font-size:1.85rem}}
+  </style>
 
-  <!-- Preload hero device images for LCP -->
+  <!-- Styles: full CSS carrega sem bloquear -->
+  <link rel="preload" as="style" href="style.css">
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <!-- Preload LCP image -->
   <link rel="preload" as="image" href="hero/all.webp" fetchpriority="high">
 
   <!-- Schema.org JSON-LD -->
@@ -161,9 +194,9 @@
         <img src="logo.webp" alt="WebGyn - Criação de Sites" width="160" height="48" loading="eager">
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/" class="nav-piece nav-active" style="--i:0">Início</a></li>
-        <li><a href="/servicos" class="nav-piece" style="--i:1">Serviços</a></li>
-        <li><a href="/resultados" class="nav-piece" style="--i:2">Resultados</a></li>
+        <li><a href="index.html" class="nav-piece nav-active" style="--i:0">Início</a></li>
+        <li><a href="servicos.html" class="nav-piece" style="--i:1">Serviços</a></li>
+        <li><a href="resultados.html" class="nav-piece" style="--i:2">Resultados</a></li>
         <li class="mobile-cta-item">
           <a href="https://wa.me/5562981051592?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20criação%20de%20sites." class="nav-cta" target="_blank" rel="noopener noreferrer">
             Fale Conosco
@@ -183,26 +216,26 @@
 
   <!-- ═══════════ HERO SECTION ═══════════ -->
   <section class="hero" id="hero">
-    <!-- Background: esteira de imagens h1-h8 -->
+    <!-- Background: esteira de imagens h1-h8 (hidden no mobile via critical CSS) -->
     <div class="hero-bg-track" aria-hidden="true">
       <div class="hero-bg-strip" id="heroBgStrip">
-        <img src="hero/h1.webp" alt="" width="360" height="640" loading="eager">
-        <img src="hero/h2.webp" alt="" width="360" height="640" loading="eager">
-        <img src="hero/h3.webp" alt="" width="360" height="640" loading="eager">
-        <img src="hero/h4.webp" alt="" width="360" height="640" loading="eager">
-        <img src="hero/h5.webp" alt="" width="360" height="640" loading="eager">
-        <img src="hero/h6.webp" alt="" width="360" height="640" loading="eager">
-        <img src="hero/h7.webp" alt="" width="360" height="640" loading="eager">
-        <img src="hero/h8.webp" alt="" width="360" height="640" loading="eager">
+        <img src="hero/h1.webp" alt="" width="360" height="640" decoding="async">
+        <img src="hero/h2.webp" alt="" width="360" height="640" decoding="async">
+        <img data-src="hero/h3.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h4.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h5.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h6.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h7.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h8.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
         <!-- Duplicadas para loop contínuo -->
-        <img src="hero/h1.webp" alt="" width="360" height="640" loading="lazy">
-        <img src="hero/h2.webp" alt="" width="360" height="640" loading="lazy">
-        <img src="hero/h3.webp" alt="" width="360" height="640" loading="lazy">
-        <img src="hero/h4.webp" alt="" width="360" height="640" loading="lazy">
-        <img src="hero/h5.webp" alt="" width="360" height="640" loading="lazy">
-        <img src="hero/h6.webp" alt="" width="360" height="640" loading="lazy">
-        <img src="hero/h7.webp" alt="" width="360" height="640" loading="lazy">
-        <img src="hero/h8.webp" alt="" width="360" height="640" loading="lazy">
+        <img data-src="hero/h1.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h2.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h3.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h4.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h5.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h6.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h7.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
+        <img data-src="hero/h8.webp" alt="" width="360" height="640" class="hero-lazy" decoding="async">
       </div>
     </div>
     <!-- Overlay -->
@@ -233,10 +266,10 @@
       <div class="hero-showcase">
         <div class="showcase-glow" aria-hidden="true"></div>
         <div class="showcase-slider" id="showcaseSlider">
-          <img src="hero/all.webp" alt="Sites responsivos WebGyn em todos os dispositivos" class="showcase-img active" width="600" height="400" fetchpriority="high">
-          <img src="hero/iphone.webp" alt="Site WebGyn otimizado para iPhone" class="showcase-img" width="600" height="400" loading="lazy">
-          <img src="hero/notebook.webp" alt="Site WebGyn em notebook" class="showcase-img" width="600" height="400" loading="lazy">
-          <img src="hero/tablet.webp" alt="Site WebGyn responsivo em tablet" class="showcase-img" width="600" height="400" loading="lazy">
+          <img src="hero/all.webp" alt="Sites responsivos WebGyn em todos os dispositivos" class="showcase-img active" width="600" height="400" fetchpriority="high" decoding="async">
+          <img data-src="hero/iphone.webp" alt="Site WebGyn otimizado para iPhone" class="showcase-img" width="600" height="400" loading="lazy" decoding="async">
+          <img data-src="hero/notebook.webp" alt="Site WebGyn em notebook" class="showcase-img" width="600" height="400" loading="lazy" decoding="async">
+          <img data-src="hero/tablet.webp" alt="Site WebGyn responsivo em tablet" class="showcase-img" width="600" height="400" loading="lazy" decoding="async">
         </div>
 
       </div>
@@ -600,7 +633,6 @@
         <path d="M0,80 C480,20 960,140 1440,80 L1440,120 L0,120 Z" fill="#6b5432"/>
       </svg>
     </div>
-    
     <div class="contact-cta-container">
       <div class="contact-cta-content reveal-up">
         <div class="contact-icon-glow">
@@ -626,9 +658,9 @@
       <div class="footer-nav">
         <h3>Navegação</h3>
         <div class="footer-links">
-          <a href="/">Início</a>
-          <a href="/servicos">Serviços</a>
-          <a href="/resultados">Resultados</a>
+          <a href="index.html">Início</a>
+          <a href="servicos.html">Serviços</a>
+          <a href="resultados.html">Resultados</a>
         </div>
       </div>
     </div>
@@ -642,6 +674,20 @@
     <span class="wpp-icon wpp-icon--lg"><i data-lucide="message-circle" class="wpp-bubble"></i><i data-lucide="phone" class="wpp-phone"></i></span>
   </a>
 
-  <script src="script.js"></script>
+
+
+  <!-- Showcase lazy-load: carrega src das imagens de slide que estão em data-src -->
+  <script>
+    (function(){
+      var imgs=document.querySelectorAll('.showcase-img[data-src]');
+      if(!imgs.length)return;
+      var t=setTimeout(function(){
+        imgs.forEach(function(i){i.src=i.dataset.src;i.removeAttribute('data-src');});
+      },2000);
+    })();
+  </script>
+
+  <script src="script.js" defer></script>
+  <script src="perf-mobile.js"></script>
 </body>
 </html>
