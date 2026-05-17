@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog WebGyn — Artigos especialistas sobre criação de sites, SEO, marketing digital, Google Meu Negócio e estratégias para empresas em Goiânia crescerem online.">
+  <meta name="keywords" content="blog criação de sites, como criar site profissional, SEO para empresas Goiânia, marketing digital para pequenas empresas, Google Meu Negócio, como aparecer no Google, dicas web design, site que vende, presença digital, estratégias de conversão, otimização de sites, landing page que converte">
+  <meta name="author" content="WebGyn">
+  <meta name="robots" content="index, follow">
+  <title>Blog | WebGyn — Dicas de Sites, SEO e Marketing Digital</title>
+
+  <link rel="canonical" href="https://webgyn.digital/blog">
+  <link rel="icon" type="image/webp" href="logo3.webp">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog — WebGyn | Estratégias Digitais que Funcionam">
+  <meta property="og:description" content="Artigos especialistas sobre criação de sites, SEO e marketing digital para empresas que querem crescer online.">
+  <meta property="og:image" content="https://webgyn.digital/hero/all.webp">
+  <meta property="og:url" content="https://webgyn.digital/blog">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="WebGyn">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog — WebGyn | Estratégias Digitais que Funcionam">
+  <meta name="twitter:description" content="Artigos especialistas sobre criação de sites, SEO e marketing digital.">
+  <meta name="twitter:image" content="https://webgyn.digital/hero/all.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
+
+  <!-- Lucide Icons -->
+  <link rel="preconnect" href="https://unpkg.com">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://webgyn.digital/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://webgyn.digital/blog" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog WebGyn",
+    "description": "Artigos especialistas sobre criação de sites, SEO e marketing digital para empresas.",
+    "url": "https://webgyn.digital/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "WebGyn",
+      "logo": { "@type": "ImageObject", "url": "https://webgyn.digital/logo.webp" }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar scrolled" id="navbar" style="--nav-bg: rgba(7, 23, 57, 0.95); --nav-border: rgba(255, 255, 255, 0.08); --nav-text: var(--white); --logo-filter: none;">
+    <div class="nav-container">
+      <a href="/" class="nav-logo" aria-label="WebGyn - Página Inicial">
+        <img src="logo.webp" alt="WebGyn - Criação de Sites" width="160" height="48" loading="eager">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="blog.html" class="nav-active">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li class="mobile-cta-item">
+          <a href="https://wa.me/5562981051592?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20criação%20de%20sites." class="nav-cta" target="_blank" rel="noopener noreferrer">
+            Fale Conosco
+          </a>
+        </li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/5562981051592?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20criação%20de%20sites." class="nav-cta" id="navCta" target="_blank" rel="noopener noreferrer">
+          Fale Conosco
+        </a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menu de navegação">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO BLOG ═══════════ -->
+  <section class="page-hero" id="pageHero">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-container">
+      <span class="hero-badge"><i data-lucide="pen-line" class="badge-icon"></i> Blog WebGyn</span>
+      <h1 class="hero-title">
+        Estratégias <span class="gradient-text">Digitais</span> que Funcionam
+      </h1>
+      <p class="hero-subtitle">Conteúdo especialista para ajudar sua empresa a dominar o mundo digital. Dicas práticas de sites, SEO e marketing que realmente geram resultados.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════ BLOG CARDS GRID ═══════════ -->
+  <section class="blog-listing" id="artigos">
+    <div class="blog-listing-container">
+      <div class="section-header reveal">
+        <span class="section-badge">Artigos Recentes</span>
+        <h2 class="section-title">Conteúdo que <span class="gradient-text">Transforma</span></h2>
+        <p class="section-subtitle">Leia, aprenda e aplique. Cada artigo foi escrito para gerar resultados reais no seu negócio.</p>
+      </div>
+
+      <div class="blog-cards-grid">
+
+        <!-- Card 1 -->
+        <a href="blog-site-profissional.html" class="blog-card reveal-up" style="--delay: 0.1s">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Por que sua empresa precisa de um site profissional" loading="lazy" width="600" height="340">
+            <span class="blog-card-tag"><i data-lucide="globe"></i> Presença Digital</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <time datetime="2026-05-16"><i data-lucide="calendar"></i> 16 Mai 2026</time>
+              <span><i data-lucide="clock"></i> 6 min de leitura</span>
+            </div>
+            <h3>Por Que Sua Empresa Precisa de um Site Profissional em 2026</h3>
+            <p>Descubra por que ter um site profissional é indispensável para qualquer empresa que quer crescer, atrair clientes e vender mais online.</p>
+            <span class="blog-card-link">Ler artigo completo <i data-lucide="arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="blog-seo-local.html" class="blog-card reveal-up" style="--delay: 0.2s">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80" alt="SEO Local para empresas em Goiânia" loading="lazy" width="600" height="340">
+            <span class="blog-card-tag blog-card-tag--blue"><i data-lucide="map-pin"></i> SEO Local</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <time datetime="2026-05-16"><i data-lucide="calendar"></i> 16 Mai 2026</time>
+              <span><i data-lucide="clock"></i> 8 min de leitura</span>
+            </div>
+            <h3>SEO Local: Como Colocar Sua Empresa no Topo do Google em Goiânia</h3>
+            <p>Um guia prático e completo para empresas que querem dominar a busca local e atrair clientes da sua região pelo Google.</p>
+            <span class="blog-card-link">Ler artigo completo <i data-lucide="arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="blog-landing-page.html" class="blog-card reveal-up" style="--delay: 0.3s">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="O que é uma landing page e como ela converte mais" loading="lazy" width="600" height="340">
+            <span class="blog-card-tag"><i data-lucide="target"></i> Conversão</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <time datetime="2026-05-14"><i data-lucide="calendar"></i> 14 Mai 2026</time>
+              <span><i data-lucide="clock"></i> 7 min de leitura</span>
+            </div>
+            <h3>Landing Page: O Que É e Por Que Ela Converte 5x Mais</h3>
+            <p>Entenda como uma landing page funciona, quais elementos ela precisa ter e por que ela é a melhor ferramenta para campanhas de vendas no Brasil.</p>
+            <span class="blog-card-link">Ler artigo completo <i data-lucide="arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="blog-erros-sites.html" class="blog-card reveal-up" style="--delay: 0.4s">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80" alt="Erros fatais que fazem sites perderem clientes" loading="lazy" width="600" height="340">
+            <span class="blog-card-tag blog-card-tag--blue"><i data-lucide="alert-triangle"></i> Erros Comuns</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <time datetime="2026-05-12"><i data-lucide="calendar"></i> 12 Mai 2026</time>
+              <span><i data-lucide="clock"></i> 8 min de leitura</span>
+            </div>
+            <h3>7 Erros Fatais que Fazem Seu Site Perder Clientes</h3>
+            <p>Descubra os erros mais comuns em sites brasileiros e aprenda como corrigi-los para transformar seu site em uma máquina de vendas.</p>
+            <span class="blog-card-link">Ler artigo completo <i data-lucide="arrow-right"></i></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA FINAL ═══════════ -->
+  <section class="contact-cta" id="contato">
+    <div class="contact-cta-container">
+      <div class="contact-cta-content reveal-up">
+        <div class="contact-icon-glow">
+          <i data-lucide="rocket" class="wpp-icon-pulse"></i>
+        </div>
+        <h2>Pronto para <span class="gradient-text">transformar</span> sua presença digital?</h2>
+        <p>Não espere mais. Cada dia sem um site profissional é um dia de clientes perdidos. Fale conosco agora e comece a vender mais.</p>
+        <a href="https://wa.me/5562981051592?text=Olá!%20Li%20o%20blog%20e%20quero%20um%20site%20profissional!" class="btn-glow-cta btn-whatsapp-large" target="_blank" rel="noopener noreferrer">
+          Falar no WhatsApp Agora
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="logo.webp" alt="WebGyn Logo" width="140" height="auto" class="footer-logo">
+        <p>Criando experiências digitais premium de alta performance e conversão para o seu negócio.</p>
+      </div>
+      <div class="footer-nav">
+        <h3>Navegação</h3>
+        <div class="footer-links">
+          <a href="index.html">Início</a>
+          <a href="servicos.html">Serviços</a>
+          <a href="resultados.html">Resultados</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 WebGyn. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════ WHATSAPP FLUTUANTE ═══════════ -->
+  <a href="https://wa.me/5562981051592?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20criação%20de%20sites." class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+    <span class="wpp-icon wpp-icon--lg"><i data-lucide="message-circle" class="wpp-bubble"></i><i data-lucide="phone" class="wpp-phone"></i></span>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
