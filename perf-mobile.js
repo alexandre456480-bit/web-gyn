@@ -12,15 +12,8 @@
      navigator.connection.effectiveType === 'slow-2g' ||
      navigator.connection.saveData === true);
 
-  // ── 1. Hero background: no mobile, esconder strip e usar cor sólida ──
+  // ── 1. Remover elementos decorativos desnecessários no mobile ──
   if (isMobile) {
-    const bgTrack = document.querySelector('.hero-bg-track');
-    if (bgTrack) {
-      // No mobile, a strip quase não é visível sob o overlay.
-      // Remove completamente para eliminar o download das 16 imagens
-      bgTrack.remove();
-    }
-
     // Remove partículas decorativas desnecessárias no mobile
     const particles = document.querySelector('.particles');
     if (particles) particles.remove();
@@ -73,7 +66,6 @@
     const style = document.createElement('style');
     style.textContent = `
       /* Desabilita animações decorativas pesadas no mobile */
-      .hero-bg-strip { animation: none !important; }
       .sp { animation: none !important; opacity: 0 !important; }
       .particle { animation: none !important; opacity: 0 !important; }
       .orb { animation: none !important; opacity: 0 !important; }

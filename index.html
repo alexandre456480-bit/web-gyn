@@ -95,14 +95,14 @@
     .showcase-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0}
     .showcase-img.active{opacity:1}
     @media(max-width:1024px){.hero-container{grid-template-columns:1fr;text-align:center;gap:40px;padding:110px 24px 60px}.hero-content{align-items:center}}
-    @media(max-width:768px){.hero-title{font-size:clamp(2rem,6vw,2.8rem)}.nav-hamburger{display:flex}.nav-actions{display:none}.nav-links{display:none}.hero-bg-track{display:none!important}.particles,.servicos-particles,.portfolio-golden-trail,.showcase-glow{display:none!important}.servico-card{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
+    @media(max-width:768px){.hero-title{font-size:clamp(2rem,6vw,2.8rem)}.nav-hamburger{display:flex}.nav-actions{display:none}.nav-links{display:none}.particles,.servicos-particles,.portfolio-golden-trail,.showcase-glow{display:none!important}.servico-card{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
     @media(max-width:480px){.hero-container{padding:100px 16px 50px}.hero-title{font-size:1.85rem}}
   </style>
 
   <!-- Styles: full CSS carrega sem bloquear -->
-  <link rel="preload" as="style" href="style.css">
-  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <link rel="preload" as="style" href="style.css?v=2.0">
+  <link rel="stylesheet" href="style.css?v=2.0" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="style.css?v=2.0"></noscript>
   <!-- Preload LCP image -->
   <link rel="preload" as="image" href="hero/all.webp" fetchpriority="high">
 
@@ -744,7 +744,7 @@
     })();
   </script>
 
-  <script src="script.js" defer></script>
-  <script src="perf-mobile.js" defer></script>
+  <script src="script.js?v=2.0" defer></script>
+  <script src="perf-mobile.js?v=2.0" defer></script>
 </body>
 </html>
